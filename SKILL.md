@@ -1,0 +1,114 @@
+---
+name: kdb-talking-head-short-production
+description: Turn one recorded single-speaker mobile video into a coherent, publish-ready vertical short through local transcription, content-aware editing, readable captions, selective explanatory graphics, technical and privacy cleanup, and optional explicitly approved platform publishing. Use when the user wants one raw talking-head take made ready to post. Use lizheng-video-editing instead for broader interview, highlight, article, and channel-asset workflows; use talking-head-recut only when the spoken edit is already locked and the remaining job is graphic packaging.
+---
+
+# KDB Talking-Head Short Production
+
+Turn one real recording into the strongest honest version of itself. Preserve the speaker's thought and personality; use editing and graphics to improve understanding, not to manufacture energy or meaning.
+
+## Target result
+
+A complete run normally leaves:
+
+- one publish-ready vertical MP4;
+- a JPEG cover that matches the video's first encoded frame;
+- corrected, retimed subtitle files;
+- the editable project and the decisions needed to reproduce it;
+- visual, semantic, technical, and privacy QA evidence;
+- optionally, a short “next time” note and an approved platform publication.
+
+The minimum success condition is not “effects were added.” A cold viewer should understand what the video is about, what remains worth watching for, and where that promise is paid off. The finished video should still sound like the person who recorded it.
+
+## Boundaries
+
+- Treat source media as read-only. Work in a project directory and keep provenance.
+- Understand the whole recording before choosing the hook, edit structure, cover, or graphics.
+- Do not invent speech, facts, evidence, stakes, or a stronger stance than the speaker expressed.
+- Default to local Chinese ASR and local media processing. Do not require an API key. Keep the ASR implementation replaceable.
+- Remove private metadata and avoid exposing sensitive screen content. Never publish source camera files directly.
+- Do not recommend pickup lines or another take in this one-pass flow. If useful, end with concise advice for how the speaker could improve the next recording.
+- Uploading or publishing is a separate external action. Before it, show the exact payload, destination, audience, visibility, and material settings; obtain approval for that payload.
+
+## Form an editorial view first
+
+Inspect the media, transcribe it, and review the whole recording before editing. Build a small content map that answers:
+
+- What will the right viewer expect from this surface and first frame?
+- What is the main viewer payoff: a judgment, result, method, change, demonstration, or story?
+- What minimum context makes the opening understandable?
+- What does the viewer already know, and what specific answer should remain open?
+- Where does the body actually deliver that answer?
+- Which moments are evidence, even if they look visually imperfect?
+
+The opening can be a result, judgment, question, unusual detail, demonstration, or story tension. It does not have to be a detached “highlight” or an instant contrarian claim. A useful cognitive gap makes the viewer think “I understand X and want to know Y”; if the viewer cannot identify X, it is confusion rather than curiosity.
+
+Read [references/editorial.md](references/editorial.md) whenever the hook, structure, cut, illustration, or next-time advice requires judgment.
+
+## Edit the spoken take
+
+Start from continuity. Remove only material whose absence makes the thought clearer: obvious pre-roll and tail, abandoned starts, standalone filler, accidental repetition, irrelevant detours, or a corrected error when the correct version is present.
+
+Make cuts at real acoustic and semantic boundaries. Prefer whole phrases or thoughts over syllable surgery. Keep useful pauses, emphasis, personality, and imperfect spoken rhythm. Reorder only complete semantic units when the resulting claim remains faithful and the visual discontinuity can be handled honestly.
+
+Editing intensity follows the material and the user's request. A coherent take may need almost no cuts; a wandering take may support a bolder reconstruction. Do not use deletion percentage, cut count, or target duration as a substitute for listening.
+
+Lock the spoken timeline before binding final captions or complex animation timing. Visual planning may inform an edit—especially when a real cut or sensitive screen needs coverage—but global timecodes should not be finalized against a moving timeline.
+
+Once the spoken edit is accepted, create a technically correct clean A-roll plus a locked, retimed caption track, and treat their timeline as immutable during graphic packaging. If the spoken edit later changes, regenerate the A-roll and timeline map rather than making undocumented cuts inside the graphics project.
+
+## Add only visuals that do work
+
+Use the simplest form that materially helps the viewer:
+
+- short opening type to establish the subject or promise;
+- a chapter rail when the spoken structure is otherwise hard to hold;
+- a full-screen relationship or process diagram for an abstract mechanism;
+- a redrawn UI, code view, or operation animation when a filmed screen is unreadable or sensitive;
+- temporary PiP or split screen when person and interface both matter;
+- a proof asset, photograph, or real screen when it carries evidence;
+- one strong conclusion treatment when the idea benefits from emphasis;
+- a chart only when real data exists.
+
+There is no required number of illustrations. If the take is already clear, subtitles and a restrained opening may be enough. If using HyperFrames, load the `hyperframes` skill first and then the relevant composition skills; use it as an expression layer after the content decision, not as the source of the decision.
+
+Design for the phone-sized result, not the desktop preview. Keep one information hierarchy, protect the face and platform UI zones, use large mobile-readable display type, and maintain only one subtitle layer. Check actual rendered frames; element bounds alone will not reveal a title covering the speaker's eyes or numbers wrapping badly.
+
+## Finish the media correctly
+
+Read [references/delivery.md](references/delivery.md) before rendering or handing off. In particular:
+
+- perform a real HDR/Dolby Vision/HLG to SDR Rec.709 transform when required; changing color tags is not a conversion;
+- explicitly choose the compatible camera audio track, control peaks before loudness normalization, and keep A/V starts and durations aligned;
+- strip location, device, timestamp, data-track, chapter, and other unintended metadata;
+- generate subtitles as short semantic units, correct names and mixed Chinese/English terms, retime them through the final edit, and inspect the rendered result;
+- ensure frame zero is the intended cover and export the matching JPEG;
+- verify decode, color, audio, captions, safe areas, face obstruction, first and last frames, black frames, and privacy on the final MP4.
+
+Do not deliver merely because a renderer exited successfully. Preview the current composition with the user whenever graphics, cover, crop, or typography materially change the viewer-visible hierarchy; a caption-only run using an already accepted treatment may not need a separate design gate. Implement the feedback, render once the direction is accepted, and inspect the encoded output rather than only the editor canvas.
+
+## Give useful next-time feedback
+
+When it adds value, end with one to three concrete suggestions derived from this recording. Phrase them as improvements for the next time, not defects the user must repair now. Prefer high-leverage changes to the opening, structure, example, or conclusion over generic delivery coaching. Keep the advice short enough to become part of the video or its handoff.
+
+## Publish only through an approval gate
+
+If the user asks for YouTube Shorts publication, read [references/youtube-shorts.md](references/youtube-shorts.md). Other platforms follow the same boundary: prepare and verify locally first, then present the exact post payload and destination. Approval applies only to what was shown; a material change to title, description, related video, visibility, audience, subtitle track, or destination requires fresh approval.
+
+After an approved upload, verify the actual platform result: processing state, visibility, public or private URL as applicable, subtitle language, related video, checks, and the published media—not merely the presence of an upload receipt.
+
+## Keep the handoff legible
+
+Project structure may adapt to the owner, but a durable run should make these truths easy to find:
+
+- source provenance and technical inspection;
+- raw and corrected transcript;
+- content map and edit decisions;
+- source-to-final timeline mapping;
+- visual brief or storyboard when graphics exist;
+- clean A-roll or current composition source;
+- final MP4, cover JPEG, and subtitle file;
+- QA report and optional next-time note;
+- publication payload and returned URL when publication occurred.
+
+For the cases and source documents that shaped this skill, read [references/sources.md](references/sources.md). They are provenance and examples, not templates that override the current video.

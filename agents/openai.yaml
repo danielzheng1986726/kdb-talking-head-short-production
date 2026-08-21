@@ -1,0 +1,4 @@
+interface:
+  display_name: "KDB Talking-Head Short Production"
+  short_description: "Turn one raw talking-head take into a publish-ready Short"
+  default_prompt: "Use $kdb-talking-head-short-production to turn this raw talking-head video into a coherent, publish-ready vertical short."

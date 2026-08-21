@@ -1,0 +1,12 @@
+.DS_Store
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.heic
+*.HEIC
+*.wav
+*.m4a
+*.webm
+node_modules/
+.hyperframes/
