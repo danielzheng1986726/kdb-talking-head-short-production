@@ -43,6 +43,8 @@ Inspect the media, transcribe it, and review the whole recording before editing.
 
 The opening can be a result, judgment, question, unusual detail, demonstration, or story tension. It does not have to be a detached “highlight” or an instant contrarian claim. A useful cognitive gap makes the viewer think “I understand X and want to know Y”; if the viewer cannot identify X, it is confusion rather than curiosity.
 
+When designed visuals are useful, plan them in semantic beats rather than treating each subtitle or sentence as a new shot. One beat may span several sentences if they perform the same viewer-facing job. Bind important graphic changes to named words, phrases, pauses, or evidence moments on the locked final timeline so timing remains explainable after retiming.
+
 Read [references/editorial.md](references/editorial.md) whenever the hook, structure, cut, illustration, or next-time advice requires judgment.
 
 ## Edit the spoken take
@@ -72,6 +74,8 @@ Use the simplest form that materially helps the viewer:
 
 There is no required number of illustrations. If the take is already clear, subtitles and a restrained opening may be enough. If using HyperFrames, load the `hyperframes` skill first and then the relevant composition skills; use it as an expression layer after the content decision, not as the source of the decision.
 
+Give each designed beat one primary visual job. When a new visual becomes primary, decide whether the previous one should leave, recede, or remain because the comparison still needs it. The A-roll is the continuity layer; stillness, negative space, and an unadorned stretch are legitimate choices. Do not import a “constant motion” or “effect at every boundary” rule into a video whose clarity and human presence benefit from restraint.
+
 Design for the phone-sized result, not the desktop preview. Keep one information hierarchy, protect the face and platform UI zones, use large mobile-readable display type, and maintain only one subtitle layer. Check actual rendered frames; element bounds alone will not reveal a title covering the speaker's eyes or numbers wrapping badly.
 
 ## Finish the media correctly
@@ -84,6 +88,8 @@ Read [references/delivery.md](references/delivery.md) before rendering or handin
 - generate subtitles as short semantic units, correct names and mixed Chinese/English terms, retime them through the final edit, and inspect the rendered result;
 - ensure frame zero is the intended cover and export the matching JPEG;
 - verify decode, color, audio, captions, safe areas, face obstruction, first and last frames, black frames, and privacy on the final MP4.
+
+For time-dependent graphics, masks, moving PiP, or a face that changes position, inspect temporal clusters rather than relying on isolated hero frames: the settled state, adjacent frames around the action, and both sides of each affected boundary. When repairing a user-reported timecode, compare that same moment before the change, after the change, and in the final encode.
 
 Do not deliver merely because a renderer exited successfully. Preview the current composition with the user whenever graphics, cover, crop, or typography materially change the viewer-visible hierarchy; a caption-only run using an already accepted treatment may not need a separate design gate. Implement the feedback, render once the direction is accepted, and inspect the encoded output rather than only the editor canvas.
 

@@ -50,6 +50,8 @@ Useful roles include:
 - **Protect:** cover a genuine jump cut, whip pan, unreadable screen, or sensitive material without hiding the entire video.
 - **Emphasize:** give one conclusion extra memory value.
 
+When a visual is meant to prove a factual claim, preserve its source and reuse status with the project. A saved source frame, exact URL, asset identifier, or user-owned artifact can carry evidence; generic B-roll can set context or mood but should not be presented as proof.
+
 Choose the form after the role:
 
 - type treatment for a short verbal idea;
@@ -60,6 +62,24 @@ Choose the form after the role:
 - full-screen card when the viewer needs to inspect the idea rather than the face.
 
 Do not make every sentence a card. Natural talking-head stretches provide continuity and make the designed moments matter.
+
+## Plan visual beats, not subtitle beats
+
+A visual beat is a stretch with one viewer-facing job, such as orienting the subject, showing proof, explaining a relationship, comparing two states, revealing a mechanism, or landing a conclusion. It may contain one sentence or several. Subtitle segmentation serves reading rhythm; it is not a shot list.
+
+When a video needs more than a couple of designed moments, use a lightweight beat sheet before implementation:
+
+| Beat | Viewer job | Audio anchor | Primary visual | Evidence | Handoff | QA moments |
+|---|---|---|---|---|---|---|
+| Example | Explain how control passes between tools | Named phrase on the locked final timeline | One simple flow | Real screen if useful | Prior panel exits before flow enters | settled frame + boundary burst |
+
+The table is a thinking aid, not a required artifact for a caption-only run. Its purpose is to prevent three common failures: a new element for every sentence, approximate timing that drifts away from speech, and visual residue that accumulates across the frame.
+
+- Anchor an important entrance, change, or exit to a named word, phrase, pause, or evidence moment after the spoken edit is locked. Store the absolute final time or a reproducible anchor-plus-offset, not an unexplained number.
+- Prefer evolving the current visual when the viewer is still doing the same cognitive task. Introduce a new subject when the task changes.
+- At a handoff, choose deliberately: the old subject exits, recedes, or remains because the new point compares against it. A leftover element with no continuing role is clutter.
+- A pivot sentence can open the next visual beat when it genuinely changes the viewer's question; it does not automatically belong to the previous scene just because it is grammatically attached to it.
+- A-roll remains the default continuity. It does not need perpetual camera drift, idle motion, a sound effect, or a designed transition to prove that editing happened.
 
 ## Treat mobile composition as the real canvas
 
@@ -96,3 +116,5 @@ Avoid scoring the performance, rewriting a full script, or asking for pickup lin
 - A large title obscured the speaker's face; moving it into real negative space solved the problem.
 - Title, spoken hook, burned subtitles, and graphic captions competed as separate messages.
 - An unstable person cutout failed around hair and moving hands; a simpler flat layout looked more intentional.
+- Treating subtitle sentences as shot boundaries produced too many entrances and no stable visual thought.
+- Letting old panels linger after their explanation ended created visual residue even when each element looked acceptable alone.

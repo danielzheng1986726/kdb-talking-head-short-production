@@ -71,6 +71,20 @@ Inspect captions in the encoded MP4 at:
 - the bottom platform-safe area;
 - the first and last cues.
 
+## Verify time-dependent design in time
+
+A contact sheet is good at hierarchy and coverage but weak at diagnosing short-lived annotations, easing, flicker, a mask that trails its target, or an element that survives one frame too long. When the composition contains timed graphics, moving PiP, dynamic privacy treatment, or layout changes, add temporal evidence proportional to the risk:
+
+- inspect a settled frame for each important visual beat, not only its entrance midpoint;
+- inspect a short consecutive-frame burst around fast annotations, movement, or a suspected flicker;
+- inspect immediately before, during, and after every materially changed scene or mask boundary;
+- derive the face/head exclusion area from representative positions across the affected interval, or from tracking when movement is substantial, rather than trusting one convenient frame;
+- for a user-reported timecode, retain the same-timecode before/after/final comparison until the encoded delivery passes.
+
+The goal is not maximum frame extraction. Choose samples that can reveal the failure in question. A stable subtitle-only stretch does not need the same evidence as a moving screen mask or a panel crossing a face.
+
+If a beat sheet or storyboard exists, compare it with the encoded video as well as inspecting the pixels: important proof and explanatory roles should not have silently disappeared, and any added visual should have a defensible role rather than being unplanned decoration.
+
 ## Make frame zero the cover
 
 The cover shown in a file browser or uploaded separately should match the first encoded frame of the final MP4. It may use a strong source frame from later in the recording, but the transition into the body must feel intentional.
@@ -101,7 +115,7 @@ Before handoff or upload, verify the final file itself:
 7. Captions are correct, retimed, readable, and never stuck or duplicated.
 8. Graphics explain what they claim to explain, do not hide the face unintentionally, and stay inside platform-safe zones.
 9. Sensitive metadata and visible private information are absent.
-10. Representative opening, middle, graphic transitions, and ending frames have been visually inspected.
+10. Representative opening, middle, graphic transitions, and ending frames have been visually inspected; time-dependent risks have adjacent-frame or short-interval evidence.
 
 A renderer's success code, a Studio preview, or a single contact sheet is not enough on its own. When one sampled frame suggests a crop, obstruction, or transition failure, inspect adjacent frames before diagnosing the whole scene. Keep a compact QA report with measured facts and the frames that support the visual judgment.
 
