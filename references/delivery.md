@@ -6,6 +6,8 @@ Use this reference for ingest, transcription, render preparation, final encoding
 
 Before a long run, check the actual environment for a media probe and encoder, the available local ASR and aligner, a color-managed macOS conversion path when relevant, fonts, and the selected composition renderer. Record the important versions in the run notes. Reuse a proven project-local implementation when it matches the source rather than retyping a complex media pipeline from memory.
 
+For a caption-first run, FFmpeg plus an editable ASS track can handle rotation, subtitles, opening type, screenshots, and simple event inserts without a motion-design framework. A tested Apple Silicon stack used `mlx-qwen3-asr` with Qwen3-ASR-1.7B, Qwen3-ForcedAligner-0.6B, `--timestamps`, and JSON output; locally cached models can run offline. Apple `avconvert` with `Preset1920x1080` supplied the reviewed SDR intermediate for that source. Check installed CLI help and the resulting color and dimensions before reusing this path; it is a concrete adapter, not a mandatory dependency or universal preset.
+
 If the preferred local ASR is unavailable, find another local adapter or report the dependency; do not silently send the recording to a cloud transcription service. If the preferred Apple color path fails, a tested FFmpeg tone-map may be used with stricter frame comparison. If there is no compatible audio track, stop instead of delivering silent or corrupt media.
 
 ## Inspect before transforming
@@ -20,6 +22,8 @@ Record at least:
 
 Generate a contact sheet across the full recording and inspect likely openings, transitions, screens, and endings. Technical metadata does not replace looking at the footage.
 
+A portrait take can be stored as sideways landscape pixels with no useful rotation tag. Confirm the orientation visually, then rotate the pixels into the intended display orientation before considering a crop. Do not center-crop a sideways frame or merely attach another rotation tag. This is distinct from a genuinely horizontal event insert whose full-width context may need to remain visible on the vertical canvas.
+
 ## Transcribe locally and preserve timing evidence
 
 Default to a local Chinese ASR model with word-level alignment. Keep the raw ASR output alongside a corrected transcript; corrections should repair recognition and punctuation without silently rewriting the speaker.
@@ -32,6 +36,8 @@ Review:
 - captions after retiming, not only before editing.
 
 ASR is an adapter, not an architectural dependency. If a different local model is more accurate or already available, use it while preserving the same evidence and outputs.
+
+Use an existing SRT to locate source material, then refine actual cut points from the sound. A cue can include a long wait, part of a neighboring word, or an imprecise sentence ending. Compare local alignment with the waveform and listen at the boundary when audio playback is available; neither an old SRT nor a second ASR pass is infallible. A supported correction may move the cut slightly outside the old cue while preserving the whole spoken word. Quantize carefully to output frames, record the actual retained intervals, and recheck the assembled excerpt for stray leading/trailing words and clipped endings. Do not describe model comparison or waveform inspection as human listening.
 
 ## Convert color, do not relabel it
 
@@ -61,7 +67,11 @@ Check:
 
 Segment by short semantic unit and natural breath. Keep enough context to understand the line while avoiding dense two-line paragraphs. Correct mixed Chinese/English spacing and names. Use one visible subtitle system in the frame; platform subtitle tracks may still be uploaded for accessibility and search.
 
+Do not burn raw fixed-character ASR line breaks into the video. Write display cues by phrase, preserving names and English terms as units. Keep raw alignment separate from editorial display corrections so a repaired word or omitted filler does not lose its timing evidence. Zero-duration character tokens can occur in forced alignment; group them into positive-duration phrase cues and validate complete text coverage, ordering, and source bounds.
+
 When retiming through cuts, bind a cue's start and end to the same retained source segment. A boundary lookup that maps the start to one segment and the end to another can turn a normal cue into a subtitle that remains on screen for tens of seconds.
+
+When adding an excerpt, lock its actual encoded duration before shifting subsequent main-take cues. Either map the excerpt's word times through its source intervals or align its assembled audio anew. Clip boundary cues to their own retained interval so text does not bleed into the next scene. Keep one source-to-final map for all inserts and returns.
 
 Inspect captions in the encoded MP4 at:
 
@@ -89,7 +99,7 @@ If a beat sheet or storyboard exists, compare it with the encoded video as well 
 
 The cover shown in a file browser or uploaded separately should match the first encoded frame of the final MP4. It may use a strong source frame from later in the recording, but the transition into the body must feel intentional.
 
-Do not assume a generated JPEG and the actual first frame are identical. Extract frame zero from the final MP4 and compare them. The cover can last one frame or briefly hold; let the spoken opening determine the rhythm rather than imposing a fixed duration.
+Do not assume a generated JPEG and the actual first frame are identical. Extract frame zero from the final MP4 and compare them. For a natural take, prefer cover type over live footage so the opening moves immediately. A separate still or brief hold remains available when it has a specific editorial purpose; matching the cover is not a reason to freeze the first several seconds.
 
 ## Remove private and incompatible material
 

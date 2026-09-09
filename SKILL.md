@@ -55,9 +55,11 @@ Make cuts at real acoustic and semantic boundaries. Prefer whole phrases or thou
 
 Editing intensity follows the material and the user's request. A coherent take may need almost no cuts; a wandering take may support a bolder reconstruction. Do not use deletion percentage, cut count, or target duration as a substitute for listening.
 
+For a coherent take where the user mainly wants subtitles, make natural continuity, corrected short captions, and a strong readable cover the baseline. Keep the original opening when it already establishes the subject and payoff. A successful run may have no interior speech cuts and no illustrations; additional evidence or graphics should earn their place in this particular recording.
+
 Lock the spoken timeline before binding final captions or complex animation timing. Visual planning may inform an edit—especially when a real cut or sensitive screen needs coverage—but global timecodes should not be finalized against a moving timeline.
 
-Once the spoken edit is accepted, create a technically correct clean A-roll plus a locked, retimed caption track, and treat their timeline as immutable during graphic packaging. If the spoken edit later changes, regenerate the A-roll and timeline map rather than making undocumented cuts inside the graphics project.
+Once the spoken edit is settled, including any review the user requested, create a technically correct clean A-roll plus a locked, retimed caption track, and treat their timeline as immutable during graphic packaging. If the spoken edit later changes, regenerate the A-roll and timeline map rather than making undocumented cuts inside the graphics project.
 
 ## Add only visuals that do work
 
@@ -78,6 +80,8 @@ Give each designed beat one primary visual job. When a new visual becomes primar
 
 Design for the phone-sized result, not the desktop preview. Keep one information hierarchy, protect the face and platform UI zones, use large mobile-readable display type, and maintain only one subtitle layer. Check actual rendered frames; element bounds alone will not reveal a title covering the speaker's eyes or numbers wrapping badly.
 
+Treat the cover as its own editorial job: state the recognizable subject and the strongest supported reason to watch in very few, very large words. For cover hierarchy and real screenshots or event excerpts, use the relevant sections of [references/editorial.md](references/editorial.md). Their layouts and durations are choices, not required additions to a caption-only run.
+
 ## Finish the media correctly
 
 Read [references/delivery.md](references/delivery.md) before rendering or handing off. In particular:
@@ -91,7 +95,7 @@ Read [references/delivery.md](references/delivery.md) before rendering or handin
 
 For time-dependent graphics, masks, moving PiP, or a face that changes position, inspect temporal clusters rather than relying on isolated hero frames: the settled state, adjacent frames around the action, and both sides of each affected boundary. When repairing a user-reported timecode, compare that same moment before the change, after the change, and in the final encode.
 
-Do not deliver merely because a renderer exited successfully. Preview the current composition with the user whenever graphics, cover, crop, or typography materially change the viewer-visible hierarchy; a caption-only run using an already accepted treatment may not need a separate design gate. Implement the feedback, render once the direction is accepted, and inspect the encoded output rather than only the editor canvas.
+Do not deliver merely because a renderer exited successfully. Share a concrete preview when graphics, cover, crop, or typography materially change the viewer-visible hierarchy, and incorporate feedback. When the user delegates end-to-end local production, continue through rendering and encoded-file inspection; a preview is not automatically a new approval gate. Honor an explicit request to stop for design review, and keep platform publication approval separate.
 
 ## Give useful next-time feedback
 

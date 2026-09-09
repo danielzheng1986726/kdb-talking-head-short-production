@@ -10,6 +10,7 @@ This skill is a synthesis of repeated real productions. These sources explain wh
 
 - Five consecutive KDB one-pass talking-head iterations established the editorial workflow: conservative semantic editing, first-frame covers, explanatory graphics, context-aware openings, next-recording advice, and final delivery QA.
 - The public Short [提高自己天花板最快的方法：先试一次你“不敢”的事](https://youtube.com/shorts/o08HjmNSEBE) supplied the latest end-to-end production evidence. Its real rework included overly small mobile type, an opening card that covered the face, wrapped chapter counters, iPhone HDR handling, caption retiming, and encoded-file QC.
+- A caption-first mobile production was explicitly approved by the user in September 2026. It retained the coherent main take, used a large two-line cover over moving footage, and added a real post screenshot plus an approximately 30-second chronological event excerpt. Rework established the practical difference between nominal font size and rendered glyph size, missing portrait rotation metadata, silent setup time inside SRT cues, and neighboring words leaking across approximate cut points. These are transferable decisions and checks; the headline, layout, insert duration, source footage, and private project files are not bundled as a universal template.
 
 ## Existing implementations and adjacent skills
 

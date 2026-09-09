@@ -26,6 +26,16 @@ Use a small promise ledger:
 
 If the body cannot pay off the promise, change the opening rather than exaggerating the body.
 
+## Give the cover one clear point
+
+For a natural talking-head short, a useful starting point is a recognizable topic plus one consequential judgment from the recording. The cover should make the right viewer understand the subject and want the explanation. Choose the hook before polishing the layout; a decorative thumbnail cannot repair an unclear promise. Keep a good original spoken opening rather than automatically moving a dramatic excerpt in front of it.
+
+Use few words, large high-contrast type, and one hierarchy. Two short lines over a real source frame worked well in a user-approved caption-first production; a solid color band can separate a line from a busy background. Omit small badges, credential stacks, secondary slogans, and decorative copy when they dilute that point. Change the layout when the source frame, current brand, or platform crop calls for it.
+
+Judge the exported cover at feed-thumbnail size. If the central idea becomes unreadable, shorten the copy or give it more space before adding effects. Font-size values alone do not establish legibility: in a 1080×1920 ASS composition using Noto Sans CJK SC, the approved run used roughly 190–210 for title sizes and 86 for captions after smaller values rendered too small. Those are renderer-specific starting points, not universal sizing rules. Check the actual glyphs, longest lines, and face clearance.
+
+When opening type can sit over the moving take, it can also supply frame zero without a static intro. Keep the person moving from the start unless an intentional hold serves this particular opening; see the first-frame guidance in [delivery.md](delivery.md).
+
 ## Preserve the speaker's proposition
 
 Editing may remove filler, false starts, repetition, or minor spoken friction. It may move a complete sentence earlier when the meaning and certainty remain the same. It must not:
@@ -62,6 +72,14 @@ Choose the form after the role:
 - full-screen card when the viewer needs to inspect the idea rather than the face.
 
 Do not make every sentence a card. Natural talking-head stretches provide continuity and make the designed moments matter.
+
+## Insert real evidence at the spoken reference
+
+When the speaker refers to a post, result, or live experiment and the user supplies the source, show the relevant evidence at that moment. A crop of the actual post can work better than an illustration: retain the title, author, and any data needed to identify what is being claimed, without changing those facts. Keep the caption readable outside the evidence when possible.
+
+For a requested event excerpt, choose the sequence that demonstrates the point—such as the challenge, the attempt, and the result—rather than filling its duration with procedural explanation. A few chronological excerpts may communicate this more clearly than one continuous stretch. Mark an abridged sequence as an excerpt; keep necessary context and do not imply continuity or an outcome the source does not show. The requested duration is a target for useful evidence, not a quota of silent setup time. Preserve meaningful hesitation while removing dead waiting when it adds nothing.
+
+Insert at a complete phrase boundary and return to a sentence that still makes sense. Supporting evidence does not by itself justify rewriting the main take. A wide event scene may belong intact on a vertical canvas if its relationship between speaker and audience is the evidence; do not force a portrait crop that removes that relationship. Keep one subtitle layer and remove the insert's labels and background when returning to the speaker.
 
 ## Plan visual beats, not subtitle beats
 
