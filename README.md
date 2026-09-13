@@ -99,6 +99,17 @@ git clone https://github.com/sunyuzheng/kdb-talking-head-short-production.git \
 
 如果你维护统一的 Skills 目录，也可以先把仓库克隆到那里，再从 `~/.codex/skills/` 建立符号链接。
 
+### Claude Code
+
+Claude Code 读 `~/.claude/skills/<name>/SKILL.md`，把仓库放到那里即可：
+
+```bash
+git clone https://github.com/sunyuzheng/kdb-talking-head-short-production.git \
+  ~/.claude/skills/kdb-talking-head-short-production
+```
+
+本机工具、字体、ASR 命令与个人偏好写在 [`references/local-env-claude-code.md`](references/local-env-claude-code.md)，上游文件不改，方便 `git pull`。
+
 ### 运行条件
 
 这个仓库提供的是 Agent 的判断、执行边界和验收规则，不捆绑视频处理软件。运行时需要检查当前环境里可用的媒体探测与编码工具、本地中文 ASR 和对齐器，以及可选的 HyperFrames 渲染器。
@@ -151,7 +162,8 @@ git clone https://github.com/sunyuzheng/kdb-talking-head-short-production.git \
     ├── editorial.md
     ├── delivery.md
     ├── youtube-shorts.md
-    └── sources.md
+    ├── sources.md
+    └── local-env-claude-code.md   # Claude Code 适配（模板）
 ```
 
 - [`SKILL.md`](SKILL.md)：任务目标、边界和主判断。

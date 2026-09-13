@@ -1,6 +1,6 @@
 ---
 name: kdb-talking-head-short-production
-description: Turn one recorded single-speaker mobile video into a coherent, publish-ready vertical short through local transcription, content-aware editing, readable captions, selective explanatory graphics, technical and privacy cleanup, and optional explicitly approved platform publishing. Use when the user wants one raw talking-head take made ready to post. Use lizheng-video-editing instead for broader interview, highlight, article, and channel-asset workflows; use talking-head-recut only when the spoken edit is already locked and the remaining job is graphic packaging.
+description: Turn one recorded single-speaker mobile video into a coherent, publish-ready vertical short through local transcription, content-aware editing, readable captions, selective explanatory graphics, technical and privacy cleanup, and optional explicitly approved platform publishing. Use when the user wants one raw talking-head take made ready to post. Use lizheng-video-editing instead for broader interview, highlight, article, and channel-asset workflows; use talking-head-recut only when the spoken edit is already locked and the remaining job is graphic packaging. 中文触发：「做视频」「处理这条视频」「剪一下这条口播」「做成小红书/抖音/视频号成片」「加字幕做封面」，并给出本地视频路径时使用。
 ---
 
 # KDB Talking-Head Short Production
@@ -84,7 +84,7 @@ Treat the cover as its own editorial job: state the recognizable subject and the
 
 ## Finish the media correctly
 
-Read [references/delivery.md](references/delivery.md) before rendering or handing off. In particular:
+Read [references/delivery.md](references/delivery.md) before rendering or handing off. On this machine (Claude Code), also read [references/local-env-claude-code.md](references/local-env-claude-code.md) for the verified tool stack, font path, ASR command, project layout, and the owner's standing preferences. In particular:
 
 - perform a real HDR/Dolby Vision/HLG to SDR Rec.709 transform when required; changing color tags is not a conversion;
 - explicitly choose the compatible camera audio track, control peaks before loudness normalization, and keep A/V starts and durations aligned;
